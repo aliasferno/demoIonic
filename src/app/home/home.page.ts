@@ -11,6 +11,7 @@ export class HomePage {
   txtN1: number = 0;
   txtN2: number = 0;
   txtResultado: number = 0;
+  txtResultadoLista: string = '';
 
   constructor() {}
 
@@ -40,6 +41,13 @@ export class HomePage {
     const n2 = this.txtN2;
     const resultado = n1 / n2;
     this.txtResultado = resultado;
+  }
+
+  numeros: Array<number> = [1,2,3,4,5,6,7,8,9,10];
+
+  mostrar(seleccion:number)
+  {
+    this.txtResultadoLista = seleccion.toString();
   }
 
 }
